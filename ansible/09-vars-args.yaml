@@ -1,0 +1,9 @@
+- name: play level orguments
+  hosts: local
+  connection: local
+  tasks:
+  - name: print the COURSE info
+    ansible.builtin.debug:
+      msg: "Course name is {{COURSE}}, Duration {{DURATION}}, Trinner is {{TRINNER}}"
+
+
