@@ -4,7 +4,7 @@
   vars:
     COURSE: ansible
     DURATION: 10HRS
-    Trainer: Siva kumar redday
+    TRINNER: Siva kumar redday
   tasks:
   - name: print the COURSE info
     ansible.builtin.debug:
