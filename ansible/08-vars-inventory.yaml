@@ -1,8 +1,7 @@
 - name: variable from prompt
   hosts: local
   connection: local
-  vars_prompt:
   tasks:  
-  - name: print cridentials 
+  - name: print course info
     ansible.builtin.debug:
      msg: "course name is {{COURSE}}, duration is {{DURATION}}, trinner is{{TRINNER}}"
