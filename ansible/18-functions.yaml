@@ -1,0 +1,6 @@
+- nmae: functions
+  hosts: local 
+  connection: local
+  tasks:
+  - ansible.builtin.debug:
+      msg: "hello,{{name}}"
