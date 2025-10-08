@@ -5,7 +5,7 @@
     tecnologies: Devops,linux,shell,Ansible #string
     name: "siva kumar"
     gmail: Info@Gmail.com
-    IPAddress: "192.168.0.1"
+    my_ip: "192.168.0.1"
     #dictionary==map
     tags:
       Application: Payment
@@ -57,7 +57,7 @@
 
   - name: check IP address is valid or not
     ansible.builtin.debug:
-     msg: "{{ ipAddress | ansible.utils.ipv4 }}"
+     msg: "{{ my_ip | ansible.utils.ipv4 }}"
 
   - name: grep for root
     ansible.builtin.shell: cat /etc/passwd | grep root
