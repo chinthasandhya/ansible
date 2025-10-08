@@ -1,4 +1,4 @@
-- nmae: functions
+- name: functions
   hosts: local 
   connection: local
   tasks:
