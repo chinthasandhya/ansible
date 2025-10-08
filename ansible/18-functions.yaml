@@ -3,6 +3,9 @@
   connection: local
   vars:
     tecnologies: Devops,linux,shell,Ansible #string
+    name: "siva kumar"
+    gmail: Info@Gmail.com
+    IPAddress: 255.373.3736
     #dictionary==map
     tags:
       Application: Payment
@@ -30,3 +33,36 @@
   - name: convert list into map
     ansible.builtin.debug:
       msg: "tag map are:{{listtags | items2dict}}"
+     # need to create student.yaml file saparate
+  # - name: read yaml and take it into variable
+  #   ansible.builtin.set_fact:
+  #     student_yaml: "{{lookup('file','student') | from_yaml }}"
+
+  # - name: convert yaml into json
+  #   ansible.builtin.debug:
+  #    msg: "json:{{student_yaml | to_json }}"
+
+  # - name: save json to file
+  #   ansible.builtin.copy:
+  #    dest: ./student-data.json
+  #    content: "json:{{student_yaml | to_nice_json }}"
+
+  - name: convert to uppercase
+    ansible.builtin.debug:
+     msg: "{{ name | upper }}"
+
+  - name: convert to lower case
+    ansible.builtin.debug:
+      msg: "{{ name | lower}}"
+
+  - name: check IP address is valid or not
+    ansible.builtin.debug:
+     msg: "{{ ipAddress | ansible.utils.ipv4 }}"
+
+  - name: grep for root
+    ansible.builtin.command: cat /etc/passwd | grep root
+    register: comand_output
+
+  - name: print command comand_output
+    ansible.builtin.debug:
+     msg: "{{command_output}}"  
