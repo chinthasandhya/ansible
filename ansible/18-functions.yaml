@@ -3,4 +3,4 @@
   connection: local
   tasks:
   - ansible.builtin.debug:
-      msg: "hello,{{name}}"
+      msg: "hello,{{name | default('Ramesh') }}"
